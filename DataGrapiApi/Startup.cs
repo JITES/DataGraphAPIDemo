@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DataGrapiApi.Configurations;
+using DataGrapiApi.DataLayer.MongoDB;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -47,6 +48,11 @@ namespace DataGrapiApi
                 //    c.WithOrigins("Https://*.dez.com").SetIsOriginAllowedToAllowWildcardSubdomains();
                 //});
             });
+
+            services.Configure<DataGraphDatabaseSettings>(Configuration.GetSection(nameof(DataGraphDatabaseSettings)));
+            services.AddSingleton<IDataGraphDatabaseSettings>(sp => sp.GetRequiredService<IOptions<DataGraphDatabaseSettings>>().Value);
+            services.AddSingleton<LiveFeedRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

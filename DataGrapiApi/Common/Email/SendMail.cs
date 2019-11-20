@@ -56,7 +56,7 @@ namespace DataGrapiApi.Common.Email
             }
             catch (Exception)
             {
-                return "Failed";
+                return Constants.StatusFailed;
             }
             finally
             {

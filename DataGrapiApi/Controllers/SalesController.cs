@@ -11,12 +11,10 @@ namespace DataGrapiApi.Controllers
     [Route("api/[controller]")]
     public class SalesController : Controller
     {
-
-        [HttpGet]
-        public async Task<IActionResult> Get(string year)
-        {
-            //var values = await _context.Values.FirstOrDefaultAsync(x => x.Year == year);
-            return Ok();
-        }
+        //[HttpGet]
+        //public async Task<IActionResult> Get(string year)
+        //{
+        //    return Ok();
+        //}
     }
 }
