@@ -27,12 +27,12 @@ namespace DataGrapiApi.Common
             catch (WebException ex) when ((ex.Response as HttpWebResponse)?.StatusCode == HttpStatusCode.InternalServerError)
             {
                 //code specifically for a WebException InternalServerError
-            }
+            } 
             finally
             {
                 //call this if exception occurs or not
                 wc?.Dispose();
-            }
+            } 
         }
 
     }

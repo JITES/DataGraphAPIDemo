@@ -6,6 +6,7 @@ namespace DataGrapiApi.Common.Email
     {
         [DataType(DataType.EmailAddress)]
         public string To { get; set; }
+
         [DataType(DataType.EmailAddress)]
         public string Cc { get; set; }
         public string Subject { get; set; }
