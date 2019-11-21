@@ -14,7 +14,6 @@ namespace DataGrapiApi.DataLayer.Core
         {
         }
 
-        //public DbSet<Movie> Movie { get; set; }
-        //public DbSet<Star> Star { get; set; }
+        //public DbSet<Sales> Sales { get; set; }
     }
 }

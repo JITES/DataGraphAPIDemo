@@ -26,6 +26,12 @@ namespace DataGrapiApi.Controllers
     [ApiController]
     public class EmailController : ControllerBase
     {
+        [HttpGet]
+        public IActionResult ExHeader()
+        {
+            throw new Exception("Check");
+        }
+
         [ValidateModel]
         [HttpPost]
         public IActionResult EmailService(EmailModel email)
